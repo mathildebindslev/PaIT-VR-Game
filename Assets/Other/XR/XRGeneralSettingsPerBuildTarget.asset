@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7509199458583806743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c3631f5e58749a59194e0cf6baf6d5, type: 3}
+  m_Name: Unknown Providers
+  m_EditorClassIdentifier: 
+  m_RequiresSettingsUpdate: 0
+  m_AutomaticLoading: 0
+  m_AutomaticRunning: 0
+  m_Loaders:
+  - {fileID: 11400000, guid: c110a14a2f0cf40aea508b9f201aaf1f, type: 2}
 --- !u!114 &-5038939490245211011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,7 +33,7 @@ MonoBehaviour:
   m_AutomaticLoading: 0
   m_AutomaticRunning: 0
   m_Loaders:
-  - {fileID: 11400000, guid: 88b1070779f3a42c2a26ea8fc1896020, type: 2}
+  - {fileID: 11400000, guid: c110a14a2f0cf40aea508b9f201aaf1f, type: 2}
 --- !u!114 &-513054368372403522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,8 +49,7 @@ MonoBehaviour:
   m_RequiresSettingsUpdate: 0
   m_AutomaticLoading: 0
   m_AutomaticRunning: 0
-  m_Loaders:
-  - {fileID: 11400000, guid: 88b1070779f3a42c2a26ea8fc1896020, type: 2}
+  m_Loaders: []
 --- !u!114 &-115028172241342421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,10 +76,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2dc886499c26824283350fa532d087d, type: 3}
   m_Name: XRGeneralSettingsPerBuildTarget
   m_EditorClassIdentifier: 
-  Keys: 0100000007000000
+  Keys: 010000000700000000000000
   Values:
   - {fileID: 7892307058133888103}
   - {fileID: -115028172241342421}
+  - {fileID: 4548843348838954905}
+--- !u!114 &4548843348838954905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
+  m_Name: Unknown Settings
+  m_EditorClassIdentifier: 
+  m_LoaderManagerInstance: {fileID: -7509199458583806743}
+  m_InitManagerOnStart: 1
 --- !u!114 &7892307058133888103
 MonoBehaviour:
   m_ObjectHideFlags: 0

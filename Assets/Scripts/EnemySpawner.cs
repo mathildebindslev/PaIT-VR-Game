@@ -12,10 +12,10 @@ public class EnemySpawner : MonoBehaviour
     public float spawnWaitMost;
     public Vector3 spawnPosition;
 
-    /* private void Start()
+    private void Start()
     {
         StartCoroutine(BeginSpawnEnemies());
-    } */
+    }
 
     private void Update()
     {

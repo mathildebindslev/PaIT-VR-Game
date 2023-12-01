@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTarget: {fileID: 0}
-  speed: 0.1
+  speed: 0.01
 --- !u!136 &-2851712490895944024
 CapsuleCollider:
   m_ObjectHideFlags: 0
