@@ -6,17 +6,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class CollectingOrbs : MonoBehaviour
 {
     public GameObject orb;
+    public GameObject goodEnvironment;
 
-    void Start()
-     {
-         XRGrabInteractable orb = GetComponent<XRGrabInteractable>();
-         orb.activated.AddListener(Collect);
-     }
-
-    public void Collect(ActivateEventArgs arg)
+    public void Collect()
     {
-        Debug.Log("Orb grabbed");
-
-        // Destroy(gameObject, 10f);
+        Debug.Log("Orb1 grabbed");
+        goodEnvironment.SetActive(true);
+        orb.SetActive(false);
     }
 }

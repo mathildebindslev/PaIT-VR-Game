@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - EnemyTrigger
+  - Orb1
+  - Orb2
+  - Orb3
   layers:
   - Default
   - TransparentFX

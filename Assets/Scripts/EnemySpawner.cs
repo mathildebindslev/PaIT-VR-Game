@@ -6,36 +6,39 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public bool sendEnemies;
-    public float spawnWait;
-    public float spawnWaitLeast;
-    public float spawnWaitMost;
-    public Vector3 spawnPosition;
-
-    private void Start()
-    {
-        StartCoroutine(BeginSpawnEnemies());
-    }
+    public bool sendEnemies = true;
+    private float spawnWait;
+    private float spawnWaitLeast = 1;
+    private float spawnWaitMost = 3;
+    private Vector3 spawnPosition;
 
     private void Update()
     {
         spawnWait = Random.Range(spawnWaitLeast, spawnWaitMost);
     }
 
-    public IEnumerator BeginSpawnEnemies()
+
+    public void OnTriggerEnter(Collider other)
     {
-        while (sendEnemies)
+        if (other.tag == "EnemyTrigger")
         {
-            yield return new WaitForSeconds(spawnWait);
+            StartCoroutine(BeginSpawnEnemies());
+        }
+      
+        IEnumerator BeginSpawnEnemies()
+        {
+            while (sendEnemies == true)
+            {
+                yield return new WaitForSeconds(spawnWait);
 
-            // spawnPosition.y = Random.Range(-5f, 5f);
-            // spawnPosition.z = Random.Range(-5f, 5f);
-            // spawnPosition.x = Random.Range(-5f, 5f);
-            spawnPosition = transform.localPosition + new Vector3(0,0,0);
+                spawnPosition.y = Random.Range(5f, 10f);
+                spawnPosition.z = Random.Range(5f, 25f);
+                spawnPosition.x = Random.Range(5f, 10f);
 
-            Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+                Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
 
-            yield return new WaitForSeconds(spawnWait);
+                yield return new WaitForSeconds(spawnWait);
+            }
         }
     }
 }
