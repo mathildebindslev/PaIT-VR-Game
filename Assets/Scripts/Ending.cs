@@ -15,6 +15,9 @@ public class Ending : MonoBehaviour
         {
             enemySpawner.sendEnemies = false;
             endingPanel.SetActive(true);
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject enemy in enemies)
+                Destroy(enemy);
         }
     }
 }

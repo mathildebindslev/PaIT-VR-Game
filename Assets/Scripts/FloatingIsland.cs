@@ -23,7 +23,7 @@ public class FloatingIsland : MonoBehaviour
         height = Random.Range(2, 4);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //calculate what the new Y position will be
         float newY = Mathf.Sin(Time.time * speed) * height + pos.y;
